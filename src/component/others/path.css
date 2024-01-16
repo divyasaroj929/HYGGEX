@@ -1,0 +1,15 @@
+.path {
+  width: 90vw;
+  height: 40px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 40px 10px;
+  cursor: pointer;
+}
+.angle {
+  height: 10px;
+  width: 10px;
+  padding: 10px;
+  color: gray;
+}

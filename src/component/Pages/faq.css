@@ -1,0 +1,92 @@
+.main {
+  /* height: 70%;
+  width: 100%; */
+  padding: 20px;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  row-gap: 20px;
+  font-family: "Nunito Sans", -apple-system, ".SFNSText-Regular",
+    "San Francisco", BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica,
+    Arial, sans-serifx;
+}
+.h1 {
+  font-family: Inter;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 58px;
+  letter-spacing: 0.005em;
+  text-align: left;
+  /* width: 97px;
+  height: 35px; */
+  background: linear-gradient(180deg, #06286e 0%, #164ec0 100%);
+  width: 97px;
+  height: 35px;
+  top: 1190px;
+  left: 104px;
+  font-size: 45px;
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  background: -webkit-linear-gradient(#06286e 0%, #164ec0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.accordion {
+  margin: 10px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: Hug (848px);
+  height: Hug (238px);
+  top: 1273px;
+  left: 104px;
+  gap: 32px;
+}
+.accordion-item {
+  width: auto;
+  padding: 10px 10px;
+  border-radius: 12px;
+  border: 1px solid #1b52c0;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+}
+.accordion-heading {
+  width: 848px;
+  height: 58px;
+  radius: 12px;
+  border: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+}
+
+.accordion-heading i {
+  transition: 0.2s ease-in-out;
+  transform-origin: center;
+  font-size: 25px;
+  margin: 0;
+  width: 15.6px;
+}
+
+.accordion-heading h4 {
+  font: Inter;
+  weight: 600;
+  size: 16px;
+  vertical-trim: Cap-height;
+  line-height: 26px;
+  color: #28262c;
+  margin: 0;
+}
+.accordion_content {
+  padding: 0 10px 10px 10px;
+}

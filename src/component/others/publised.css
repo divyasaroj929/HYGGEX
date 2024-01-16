@@ -1,0 +1,37 @@
+.company-details {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 0px;
+}
+.left-logo,
+.right-logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.title {
+  padding-left: 20px;
+}
+.company-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  box-shadow: rgba(22, 47, 147, 0.35) 0px 5px 15px;
+}
+
+.para {
+  font-weight: 500;
+  font-size: 25px;
+  background: -webkit-linear-gradient(#06286e 0%, #164ec0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
