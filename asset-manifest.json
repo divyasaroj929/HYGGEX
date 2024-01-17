@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/HYGGEX/static/css/main.cb869c16.css",
+    "main.js": "/HYGGEX/static/js/main.dc998975.js",
+    "static/media/Mask.png": "/HYGGEX/static/media/Mask.ecdfafe8fa10f90309db.png",
+    "static/media/hyggex.svg": "/HYGGEX/static/media/hyggex.2eff76fc138ed6788df73f5f8324df8d.svg",
+    "index.html": "/HYGGEX/index.html",
+    "main.cb869c16.css.map": "/HYGGEX/static/css/main.cb869c16.css.map",
+    "main.dc998975.js.map": "/HYGGEX/static/js/main.dc998975.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cb869c16.css",
+    "static/js/main.dc998975.js"
+  ]
+}
