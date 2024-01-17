@@ -1,6 +1,5 @@
 .main {
-  /* height: 70%;
-  width: 100%; */
+  width: 100%;
   padding: 20px;
   position: relative;
   display: flex;
@@ -38,36 +37,38 @@
 }
 .accordion {
   margin: 10px;
+  height: 100%;
   width: 90%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  width: Hug (848px);
-  height: Hug (238px);
-  top: 1273px;
-  left: 104px;
   gap: 32px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: 5px;
 }
 .accordion-item {
   width: auto;
-  padding: 10px 10px;
+  background-color: white;
   border-radius: 12px;
   border: 1px solid #1b52c0;
   overflow: hidden;
   cursor: pointer;
   position: relative;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 .accordion-heading {
-  width: 848px;
-  height: 58px;
-  radius: 12px;
+  height: 50px;
+  width: 100%;
+  border-radius: 12px;
   border: 1px;
   padding-left: 10px;
   padding-right: 10px;
   display: flex;
-  align-items: start;
+  align-items: center;
   justify-content: space-between;
+  margin: 0%;
 }
 
 .accordion-heading i {

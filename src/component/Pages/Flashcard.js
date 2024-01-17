@@ -67,16 +67,16 @@ const Flashcard = ({ Children }) => {
           <img src={Vectorrestart} alt="" className="img-size-before" />
           <div className="arrow-silde-center">
             <img
-              src={Vectoradd}
+              src={Vectorback}
               alt=""
-              onClick={prvSlideButton}
+              onClick={nextSlideButton}
               className="img-size"
             />
             <text className="text">01/10</text>
             <img
-              src={Vectorback}
+              src={Vectoradd}
               alt=""
-              onClick={nextSlideButton}
+              onClick={prvSlideButton}
               className="img-size"
             />
           </div>

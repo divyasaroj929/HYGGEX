@@ -7,11 +7,11 @@ import PublisedNavbar from "../others/PublisedNavbar";
 import Path from "../others/Path";
 
 const Home = () => {
+  console.log(FAQdata);
   return (
     <div>
       <Navbar />
       <Path />
-
       <Flashcard />
       <PublisedNavbar />
       <FAQ FAQdata={FAQdata} />

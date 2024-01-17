@@ -9,3 +9,33 @@
   cursor: pointer;
   background: linear-gradient(180deg, #06286e 0%, #164ec0 100%);
 }
+
+.button-style {
+  background-color: #3e7afc;
+  color: white;
+}
+.button-style:hover {
+  background-color: #5c8ffe;
+}
+
+.button-style-ghost {
+  color: #3e7afc;
+  background-color: #fff;
+}
+.button-style-ghost:hover {
+  background-color: rgb(223, 226, 246);
+}
+.common-button-style {
+  height: 2rem;
+  border: none;
+  margin-right: 10px;
+  text-transform: capitalize;
+  border-radius: 20px;
+  font-size: 12px;
+  outline: none;
+  cursor: pointer;
+  white-space: nowrap;
+  padding: 2px 15px;
+  font-weight: 500;
+  background: linear-gradient(180deg, #06286e 0%, #164ec0 100%);
+}

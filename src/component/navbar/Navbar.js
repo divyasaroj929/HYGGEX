@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./navbar.css";
 import Button from "../../component/button/Button";
 import hyggex from "../data/hyggex.svg";
+import FAQ from "../Pages/FAQ";
+import PopupModal from "../others/PopupModal";
 const Navbar = () => {
+  const [modal, setModal] = useState(false);
+
   const navData = [
     {
       name: "Home",
@@ -22,6 +26,11 @@ const Navbar = () => {
       path: "/faq",
     },
   ];
+
+  const closeForm = () => {
+    setModal(false);
+  };
+
   // console.log(navData);
 
   return (
@@ -42,9 +51,15 @@ const Navbar = () => {
               </li>
             );
           })}
-          <Button />
+          <Button
+            onClick={() => {
+              setModal(true);
+            }}
+            name="Login"
+          />
         </ul>
       </div>
+      {modal && <PopupModal closeForm={closeForm} />}
     </div>
   );
 };

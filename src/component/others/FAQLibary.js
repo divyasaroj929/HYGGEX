@@ -14,13 +14,6 @@ const FAQLibary = ({ question, answer }) => {
       color: open ? "black" : "black",
     },
   };
-  //open animation with react spring
-
-  const openAnimation = useSpring({
-    from: { opacity: "0", maxHeight: "25px" },
-    to: { opacity: "1", maxHeight: open ? "200px" : "25px" },
-    config: { duration: "300" },
-  });
 
   //rotate animation
   const iconAnimation = useSpring({
@@ -37,7 +30,7 @@ const FAQLibary = ({ question, answer }) => {
 
   return (
     <>
-      <animated.div className="accordion-item" style={openAnimation}>
+      <animated.div className="accordion-item">
         <div className="accordion-heading" onClick={toggleHandler}>
           <h4 style={styles.accordionTitle}>{question}</h4>
 
@@ -45,7 +38,7 @@ const FAQLibary = ({ question, answer }) => {
             <BiChevronDown />
           </animated.i>
         </div>
-        <div className="accordion_content">{answer}</div>
+        {open && <div className="accordion_content">{answer}</div>}
       </animated.div>
     </>
   );
