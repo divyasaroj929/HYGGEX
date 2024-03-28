@@ -20,7 +20,6 @@
 .accordion-item {
   width: 848px;
   border: 2px solid;
-  border-radius: 20;
   border-image: linear-gradient(#06286e, #164ec0) 1;
 }
 .accordion-list__item + .accordion-list__item {

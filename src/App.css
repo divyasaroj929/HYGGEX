@@ -31,6 +31,8 @@
   letter-spacing: 0.005em;
   text-align: left;
   background-image: -webkit-linear-gradient(180deg, #06286e 0%, #164ec0 100%);
+  background-clip: text;
+  color: transparent;
 }
 .breadcrumbs {
   display: flex;
@@ -53,11 +55,13 @@
   font-size: 16px;
   margin-right: 5px;
 }
-
+.breadcrumbs span:last-child h1 {
+  font-size: 20px; /* Adjust font size as needed */
+  background: linear-gradient(45deg, #06286e, #164ec0); /* Gradient color */
+  -webkit-background-clip: text; /* Clip text to apply gradient */
+  -webkit-text-fill-color: transparent; /* Transparent text color */
+}
 .breadcrumb-arrow-icon {
-  width: 10px;
-  height: auto;
-  margin-right: 5px;
 }
 
 .tabs {
@@ -90,7 +94,7 @@
   background-color: #fff;
   display: inline-block;
   padding: 10px;
-  color: #c7c6c2;
+  color: #656561;
   cursor: pointer;
   margin-left: 1px;
   font-size: x-large;
