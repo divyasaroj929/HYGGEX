@@ -1,15 +1,25 @@
 {
   "files": {
-    "main.css": "/HYGGEX/static/css/main.cb869c16.css",
-    "main.js": "/HYGGEX/static/js/main.dc998975.js",
-    "static/media/Mask.png": "/HYGGEX/static/media/Mask.ecdfafe8fa10f90309db.png",
-    "static/media/hyggex.svg": "/HYGGEX/static/media/hyggex.2eff76fc138ed6788df73f5f8324df8d.svg",
+    "main.css": "/HYGGEX/static/css/main.b5d7cc33.css",
+    "main.js": "/HYGGEX/static/js/main.98a4f11a.js",
+    "static/media/midlogoicon.svg": "/HYGGEX/static/media/midlogoicon.ffc156f23e40a457c33956b3a243cb8e.svg",
+    "static/media/logo.svg": "/HYGGEX/static/media/logo.2eff76fc138ed6788df73f5f8324df8d.svg",
+    "static/media/addcardicon.svg": "/HYGGEX/static/media/addcardicon.e39a252a04afe94e34ce6b948c73250a.svg",
+    "static/media/goaheadicon.svg": "/HYGGEX/static/media/goaheadicon.733bdb5036df74532554313239555676.svg",
+    "static/media/gobackicon.svg": "/HYGGEX/static/media/gobackicon.10ad6654e22ea3d4fd47cc03abfd78ae.svg",
+    "static/media/homelogo.svg": "/HYGGEX/static/media/homelogo.f289c78639c69159abc2e932d385016b.svg",
     "index.html": "/HYGGEX/index.html",
-    "main.cb869c16.css.map": "/HYGGEX/static/css/main.cb869c16.css.map",
-    "main.dc998975.js.map": "/HYGGEX/static/js/main.dc998975.js.map"
+    "static/media/accrodianicon.svg": "/HYGGEX/static/media/accrodianicon.e461a3528725d99c7106fc212229bd05.svg",
+    "static/media/lighticon.svg": "/HYGGEX/static/media/lighticon.16a4ad73992b80115ceb93a4d9f613a3.svg",
+    "static/media/restarticon.svg": "/HYGGEX/static/media/restarticon.f8e73b72d70f9766871418c98c443f97.svg",
+    "static/media/soundicon.svg": "/HYGGEX/static/media/soundicon.097ddfcdfe860d9a6861e315c05977e4.svg",
+    "static/media/bigscreenicon.svg": "/HYGGEX/static/media/bigscreenicon.0ded6bc68550098a07cd526f2ef70f63.svg",
+    "static/media/breadcrumbarrowicon.svg": "/HYGGEX/static/media/breadcrumbarrowicon.bf5a74d87e0bc38576b24cf8f6435181.svg",
+    "main.b5d7cc33.css.map": "/HYGGEX/static/css/main.b5d7cc33.css.map",
+    "main.98a4f11a.js.map": "/HYGGEX/static/js/main.98a4f11a.js.map"
   },
   "entrypoints": [
-    "static/css/main.cb869c16.css",
-    "static/js/main.dc998975.js"
+    "static/css/main.b5d7cc33.css",
+    "static/js/main.98a4f11a.js"
   ]
 }
