@@ -1,45 +1,24 @@
 import React, { useState } from "react";
-import { BiChevronDown } from "react-icons/bi";
-import { useSpring, animated } from "react-spring";
+import accrodianicon from "../../img/accrodianicon.svg";
 
 const FAQLibary = ({ question, answer }) => {
-  const [open, setOpen] = useState(false);
-  let toggleHandler = (e) => {
-    setOpen(!open);
-  };
-
-  const styles = {
-    //if open is true, change color of title
-    accordionTitle: {
-      color: open ? "black" : "black",
-    },
-  };
-
-  //rotate animation
-  const iconAnimation = useSpring({
-    from: {
-      transform: "rotate(0deg)",
-      color: "#ffff",
-    },
-    to: {
-      transform: open ? "rotate(180deg)" : "rotate(0deg)",
-      color: open ? "black" : "black",
-    },
-    config: { duration: "120" },
-  });
-
+  const [opened, setOpened] = useState(false);
   return (
     <>
-      <animated.div className="accordion-item">
-        <div className="accordion-heading" onClick={toggleHandler}>
-          <h4 style={styles.accordionTitle}>{question}</h4>
-
-          <animated.i style={iconAnimation}>
-            <BiChevronDown />
-          </animated.i>
+      <div
+        className={`accordion-item ${opened && "accordion-item--opened"}`}
+        onClick={() => setOpened(!opened)}
+      >
+        <div className="accordion-item__line">
+          <h3 className="accordion-item__title">{question}</h3>
+          <span className="accordion-item__icon">{accrodianicon}</span>
         </div>
-        {open && <div className="accordion_content">{answer}</div>}
-      </animated.div>
+        <div className="accordion-item__inner">
+          <div className="accordion-item__content">
+            <p className="accordion-item__paragraph">{answer}</p>
+          </div>
+        </div>
+      </div>
     </>
   );
 };

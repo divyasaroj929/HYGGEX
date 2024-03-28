@@ -1,31 +1,24 @@
 import React, { useState } from "react";
 import FAQLibary from "../others/FAQLibary";
+import { faqdata } from "../../data";
 import "./faq.css";
-
-const FAQ = ({ FAQdata }) => {
-  const [data, setData] = useState(FAQdata);
-  console.log(data);
-
-  console.log(data);
+function FAQ() {
+  const [data, setData] = useState();
 
   return (
     <>
-      <div className="main">
-        <h1 className="h1">FAQ</h1>
-
-        <div className="accordion">
-          {data.map((item) => {
-            console.log(item);
-            return (
-              <>
-                <FAQLibary key={item.id} {...item} />
-              </>
-            );
-          })}
-        </div>
-      </div>
+      <h1 className="faq-h1">FAQ</h1>
+      <ul className="accordion-list">
+        {faqdata.map((item, index) => {
+          console.log(item);
+          return (
+            <>
+              <FAQLibary {...item} />
+            </>
+          );
+        })}
+      </ul>
     </>
   );
-};
-
+}
 export default FAQ;

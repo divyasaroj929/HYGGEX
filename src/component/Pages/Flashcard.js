@@ -1,90 +1,129 @@
-import React, { Children, useEffect, useState } from "react";
-import { CenterTab, FAQdata, Slider } from "../data/data";
-import { NavLink } from "react-router-dom";
-import Vectorrestart from "../data/Vectorrestart.png";
-import Vectoradd from "../data/Vectoradd.png";
-import Vectorback from "../data/Vectorback.png";
-import Vectorscreen from "../data/Vectorscreen.png";
+import React, { useState } from "react";
+import restarticon from "../../img/restarticon.svg";
+import goaheadicon from "../../img/goaheadicon.svg";
+import gobackicon from "../../img/gobackicon.svg";
+import bigscreenicon from "../../img/bigscreenicon.svg";
+import lighticon from "../../img/lighticon.svg";
+import soundicon from "../../img/soundicon.svg";
 
-const Flashcard = ({ Children }) => {
-  const [current, setCurrent] = useState(0);
-  const length = Slider.length;
-
-  useEffect(() => {
-    const next = setInterval(() => {
-      setCurrent(current === length - 1 ? 0 : current + 1);
-    }, 2000);
-
-    return () => clearInterval(next);
-  }, [current]);
+function Flashcard({ tab }) {
+  const [activeTab, setActiveTab] = useState(tab[0].id);
+  const currentTabNumber = Number(activeTab);
+  const totalTabs = tab.length;
 
   const nextSlideButton = () => {
-    console.log(current, "next");
-    setCurrent(current === length - 1 ? 0 : current + 1);
+    setActiveTab(
+      activeTab === tab.length.toString() ? "1" : String(Number(activeTab) + 1)
+    );
   };
 
   const prvSlideButton = () => {
-    console.log(current, "prv");
+    setActiveTab(
+      activeTab === "1" ? tab.length.toString() : String(Number(activeTab) - 1)
+    );
+  };
 
-    setCurrent(current === 0 ? length - 1 : current - 1);
+  const restartSlides = () => {
+    setActiveTab(tab[0].id);
+  };
+
+  const listTitles = tab.map((item) => (
+    <li
+      key={item.id}
+      onClick={() => setActiveTab(item.id)}
+      className={
+        activeTab === item.id ? "tab-title tab-title--active" : "tab-title"
+      }
+    >
+      {item.tabTitle}
+    </li>
+  ));
+
+  const listContent = tab.map((item) => (
+    <p
+      key={item.id}
+      style={{ display: activeTab === item.id ? "block" : "none" }}
+    >
+      {item.tabContent}
+    </p>
+  ));
+
+  const toggleFullScreen = () => {
+    // const element = document.documentElement;
+    const element = document.getElementById("content");
+
+    const fullScreen = document.fullscreenElement;
+    if (!fullScreen) {
+      if (element.requestFullscreen) {
+        element.requestFullscreen();
+      }
+    } else {
+      if (document.exitFullscreen) {
+        document.exitFullscreen();
+      }
+    }
   };
 
   return (
-    <div>
+    <>
       <div className="center-tab">
-        <h1>Relations and Functions ( Mathematics )</h1>
-        <div className="center-navbar">
-          <ul>
-            {CenterTab.map((item, index) => {
-              console.log(item);
-              return (
-                <li key={index}>
-                  <NavLink to={item.path} className="link">
-                    {item.name}
-                  </NavLink>
-                </li>
-              );
-            })}
-          </ul>
-        </div>
+        <h1>Relations and Functions (Mathematics)</h1>
       </div>
-
-      <div className="center-img-carousal">
-        {Slider.map((slide, index) => {
-          return (
-            <div
-              className={
-                current === index ? "silder_active_div_image" : "deactive"
-              }
-              key={index}
-            >
-              <img src={slide.img} alt="pic" className="auto-image-silde" />
+      <div className="tabs" id="tabs">
+        <ul className="tabs-titles">{listTitles}</ul>
+        <div className="join-tab-arrowbutton">
+          <div className="tab-content" id="content">
+            {listContent}
+            <div className="lighticon-soundicon">
+              <img
+                src={lighticon}
+                alt=""
+                onClick={nextSlideButton}
+                className="lightimg"
+              />
+              <img
+                src={soundicon}
+                alt=""
+                onClick={nextSlideButton}
+                className="soundimg"
+              />
             </div>
-          );
-        })}
-
-        <div className="arrow-silde">
-          <img src={Vectorrestart} alt="" className="img-size-before" />
-          <div className="arrow-silde-center">
-            <img
-              src={Vectorback}
-              alt=""
-              onClick={nextSlideButton}
-              className="img-size"
-            />
-            <text className="text">01/10</text>
-            <img
-              src={Vectoradd}
-              alt=""
-              onClick={prvSlideButton}
-              className="img-size"
-            />
           </div>
-          <img src={Vectorscreen} alt="" className="img-size-before" />
+          <div className="center-img-carousal">
+            <div className="arrow-silde">
+              <img
+                src={restarticon}
+                alt=""
+                className="img-size-before"
+                onClick={restartSlides}
+              />
+              <div className="arrow-silde-center">
+                <img
+                  src={gobackicon}
+                  alt=""
+                  onClick={prvSlideButton}
+                  className="img-size"
+                />
+                <text className="text">{`${currentTabNumber}/${totalTabs}`}</text>
+                <img
+                  src={goaheadicon}
+                  alt=""
+                  onClick={nextSlideButton}
+                  className="img-size"
+                />
+              </div>
+              <img
+                src={bigscreenicon}
+                alt=""
+                className="img-size-before"
+                onClick={toggleFullScreen}
+              />
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
-};
+}
 
 export default Flashcard;

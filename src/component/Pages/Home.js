@@ -1,21 +1,22 @@
 import React from "react";
 import Navbar from "../navbar/Navbar";
-import FAQ from "./FAQ";
-import { FAQdata } from "../data/data";
 import Flashcard from "./Flashcard";
 import PublisedNavbar from "../others/PublisedNavbar";
 import Path from "../others/Path";
-
+import FAQ from "./FAQ";
+import BreadCrumbs from "../others/BreadCrumbs";
+import { breadcrumbs, tab } from "../../data";
 const Home = () => {
-  console.log(FAQdata);
   return (
-    <div>
-      <Navbar />
-      <Path />
-      <Flashcard />
-      <PublisedNavbar />
-      <FAQ FAQdata={FAQdata} />
-    </div>
+    <>
+      <div className="home-container ">
+        <Navbar />
+        <BreadCrumbs breadcrumbs={breadcrumbs} />
+        <Flashcard tab={tab} />
+        <PublisedNavbar />
+        <FAQ />
+      </div>
+    </>
   );
 };
 

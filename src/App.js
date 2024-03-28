@@ -10,25 +10,23 @@ import Game from "./component/tab/Game";
 import Others from "./component/tab/Others";
 
 import "./App.css";
-import { FAQdata } from "./component/data/data";
 
 function App() {
   return (
     <>
-      <div className="home-container">
-        <Routes>
-          <Route exact path="/HYGGEX" element={<Home />} />
-          <Route path="/flashcard" element={<Flashcard />} />
-          <Route path="/faq" element={<FAQ FAQdata={FAQdata} />} />
-          <Route path="/contact" element={<Contact />} />
-
-          <Route path="/study" element={<Study />} />
-          <Route path="/quiz" element={<Quiz />} />
-          <Route path="/text" element={<Test />} />
-          <Route path="/game" element={<Game />} />
-          <Route path="/other" element={<Others />} />
-        </Routes>
-      </div>
+      {/* <div className="home-container "> */}
+      <Routes>
+        <Route exact path="/HYGGEX" element={<Home />} />
+        <Route path="/flashcard" element={<Flashcard />} />
+        <Route path="/faq" element={<FAQ />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/study" element={<Study />} />
+        <Route path="/quiz" element={<Quiz />} />
+        <Route path="/text" element={<Test />} />
+        <Route path="/game" element={<Game />} />
+        <Route path="/other" element={<Others />} />
+      </Routes>
+      {/* </div> */}
     </>
   );
 }

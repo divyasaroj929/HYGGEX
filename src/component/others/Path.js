@@ -1,21 +1,9 @@
 import React from "react";
-import vectorAngle from "../data/VectorAngle.png";
-import vectorHome from "../data/VectorHome.png";
 import "./path.css";
+import BreadCrumbs from "./BreadCrumbs";
+import { breadcrumbs } from "../../data";
 const Path = () => {
-  return (
-    <div>
-      <div className="path">
-        <img src={vectorHome} alt="" />
-        <img src={vectorAngle} alt="" className="angle" />
-        <p>Flashcard</p>
-        <img src={vectorAngle} alt="" className="angle" />
-        <p>Mathematics</p>
-        <img src={vectorAngle} alt="" className="angle" />
-        <p>Relation and Function</p>
-      </div>
-    </div>
-  );
+  return <BreadCrumbs breadcrumbs={breadcrumbs} />;
 };
 
 export default Path;

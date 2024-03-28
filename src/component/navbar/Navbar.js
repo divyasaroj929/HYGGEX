@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import "./navbar.css";
 import Button from "../../component/button/Button";
-import hyggex from "../data/hyggex.svg";
 import FAQ from "../Pages/FAQ";
 import PopupModal from "../others/PopupModal";
+import logo from "../../img/logo.svg";
+import "./navbar.css";
 const Navbar = () => {
   const [modal, setModal] = useState(false);
 
@@ -34,13 +34,12 @@ const Navbar = () => {
   // console.log(navData);
 
   return (
-    <div className="container-hold-navbar">
-      <div className="link">
-        <img src={hyggex} alt="" />
+    <>
+      <div className="logo-link">
+        <img src={logo} alt="" />
       </div>
-
       <div className="handle-left-side-navbar">
-        <ul>
+        <ul className="ul">
           {navData.map((item, index) => {
             console.log(item);
             return (
@@ -60,7 +59,7 @@ const Navbar = () => {
         </ul>
       </div>
       {modal && <PopupModal closeForm={closeForm} />}
-    </div>
+    </>
   );
 };
 

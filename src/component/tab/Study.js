@@ -1,8 +1,11 @@
 import React from "react";
+import Flashcard from "../Pages/Flashcard";
 const Study = () => {
   return (
     <>
-      <div>Study</div>
+      <Flashcard>
+        <h1>9</h1>
+      </Flashcard>
     </>
   );
 };

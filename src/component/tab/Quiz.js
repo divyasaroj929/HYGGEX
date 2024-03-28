@@ -1,8 +1,11 @@
 import React from "react";
+import Flashcard from "../Pages/Flashcard";
 const Quiz = () => {
   return (
     <>
-      <div className="component">Quiz</div>
+      <Flashcard>
+        <h1>7</h1>
+      </Flashcard>
     </>
   );
 };

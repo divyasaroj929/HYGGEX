@@ -1,8 +1,11 @@
 import React from "react";
+import Flashcard from "../Pages/Flashcard";
 const Others = () => {
   return (
     <>
-      <div className="component">Other</div>;
+      <Flashcard>
+        <h1>5</h1>
+      </Flashcard>
     </>
   );
 };

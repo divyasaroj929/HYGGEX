@@ -1,93 +1,100 @@
-.main {
-  width: 100%;
-  padding: 20px;
-  position: relative;
+.accordion-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  border-radius: 0.4rem;
+  overflow: hidden;
+
+  padding-bottom: 300px;
+  width: 848px;
   display: flex;
   justify-content: flex-start;
+  align-items: flex-start;
   flex-direction: column;
-  row-gap: 20px;
-  font-family: "Nunito Sans", -apple-system, ".SFNSText-Regular",
-    "San Francisco", BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica,
-    Arial, sans-serifx;
-}
-.h1 {
-  font-family: Inter;
-  font-size: 40px;
-  font-weight: 700;
-  line-height: 58px;
-  letter-spacing: 0.005em;
-  text-align: left;
-  /* width: 97px;
-  height: 35px; */
-  background: linear-gradient(180deg, #06286e 0%, #164ec0 100%);
-  width: 97px;
-  height: 35px;
-  top: 1190px;
+  position: absolute;
+  top: 1273px;
   left: 104px;
-  font-size: 45px;
-  text-align: start;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-weight: 500;
-  background: -webkit-linear-gradient(#06286e 0%, #164ec0 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.accordion {
-  margin: 10px;
-  height: 100%;
-  width: 90%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   gap: 32px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  margin: 5px;
 }
 .accordion-item {
-  width: auto;
-  background-color: white;
-  border-radius: 12px;
-  border: 1px solid #1b52c0;
-  overflow: hidden;
-  cursor: pointer;
-  position: relative;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  width: 848px;
+  border: 2px solid;
+  border-radius: 20;
+  border-image: linear-gradient(#06286e, #164ec0) 1;
 }
-.accordion-heading {
-  height: 50px;
-  width: 100%;
-  border-radius: 12px;
-  border: 1px;
-  padding-left: 10px;
-  padding-right: 10px;
+.accordion-list__item + .accordion-list__item {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.accordion-item--opened .accordion-item__icon {
+  transform: rotate(180deg);
+  width: 24px;
+  height: 24px;
+}
+.accordion-item--opened .accordion-item__inner {
+  max-height: 200rem;
+  transition-timing-function: cubic-bezier(0.895, 0.03, 0.685, 0.22);
+  transition-duration: 0.5s;
+  transition-property: max-height;
+}
+.accordion-item--opened .accordion-item__content {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.2s;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.2s;
+  transition-property: opacity, transform;
+}
+.accordion-item__line {
+  display: block;
+  padding: 0.8rem 1.2rem;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  margin: 0%;
+  align-items: center;
+  background-color: #fff;
+  z-index: 2;
+  position: relative;
 }
-
-.accordion-heading i {
-  transition: 0.2s ease-in-out;
-  transform-origin: center;
-  font-size: 25px;
+.accordion-item__title {
+  font-size: 16px;
   margin: 0;
-  width: 15.6px;
-}
-
-.accordion-heading h4 {
-  font: Inter;
-  weight: 600;
-  size: 16px;
-  vertical-trim: Cap-height;
-  line-height: 26px;
+  font-weight: 600;
   color: #28262c;
-  margin: 0;
 }
-.accordion_content {
-  padding: 0 10px 10px 10px;
+.accordion-item__icon {
+  width: 1.2rem;
+  height: 1.2rem;
+  transition: transform 0.3s ease-in-out;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAQAAABIkb+zAAABGklEQVR4Ae3RAcZCQRiF4buDfwshBGi+2UQgcIGAVtpSIuS/KyilG+UTcbk6zIH3GQBm3mM6AAAAAAAAAACA+eqf/yZBXcV/2XeCVPYx1FXj/FjGUMd45AQp/1HHGGLZNL+e61jHnKDmv8652YT1IvPfE2LX/Sh27/ycsF60yT/lk58JYn6eU4MJccjnlAmZ/33i0OAH4jg9Qcw/5g9YJpS+m6n0xvzpCfVe+nn59S7kGyYo+YYJWz3fO+E2PaFs9XzPhMy/6fmWCXq+YUJs9HzrhLh+JsQmrnq+bYKeb52g53snXPR88wQ93z9Bz/dP0PP9E/R89wQ93zpBz7dO0POtE/R86wQ93zpBzzdP+MoHAAAAAAAAAADAExTnTW20AtjhAAAAAElFTkSuQmCC);
+  opacity: 0.6;
+  cursor: pointer;
+}
+.accordion-item__inner {
+  max-height: 0;
+  overflow: hidden;
+  text-transform: cubic-bezier(0.95, 0.05, 0.795, 0.035);
+  transition-duration: 0.5s;
+  transition-property: max-height;
+  z-index: 1;
+  position: relative;
+}
+.accordion-item__content {
+  opacity: 0;
+  transform: translateY(-1rem);
+  transition-timing-function: linear, ease;
+  transition-duration: 0.1s;
+  transition-property: opacity, transform;
+  transition-delay: 0.5s;
+  /* padding: 0 1.2rem 1.2rem; */
+  padding-bottom: 1.2rem;
+}
+.accordion-item__paragraph {
+  margin: 0;
+  font-size: 1.3rem;
+  color: #333;
+  font-weight: 300;
+  line-height: 1.3;
 }
