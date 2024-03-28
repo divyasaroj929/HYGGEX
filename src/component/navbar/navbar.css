@@ -18,7 +18,6 @@
   top: 32px;
   left: 104px;
   gap: 0px;
-  opacity: 0px;
 }
 .handle-left-side-navbar .ul {
   display: flex;
@@ -30,7 +29,6 @@
   top: 27px;
   left: 812px;
   gap: 40px;
-  opacity: 0px;
 }
 .handle-left-side-navbar li {
   height: 50%;
