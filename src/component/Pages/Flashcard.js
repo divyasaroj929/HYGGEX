@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 import restarticon from "../../img/restarticon.svg";
 import goaheadicon from "../../img/goaheadicon.svg";
 import gobackicon from "../../img/gobackicon.svg";
@@ -7,7 +10,7 @@ import lighticon from "../../img/lighticon.svg";
 import soundicon from "../../img/soundicon.svg";
 
 function Flashcard({ tab }) {
-  const [activeTab, setActiveTab] = useState(tab[0].id);
+  const [activeTab, setActiveTab] = useState(tab.length > 0 ? tab[0].id : "");
   const currentTabNumber = Number(activeTab);
   const totalTabs = tab.length;
 
@@ -63,6 +66,30 @@ function Flashcard({ tab }) {
       }
     }
   };
+  const showToastMessage = () => {
+    toast("light mode !", {
+      position: "top-left",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+    });
+  };
+  const showSoundToastMessage = () => {
+    toast("sound function !", {
+      position: "top-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+    });
+  };
 
   return (
     <>
@@ -78,13 +105,14 @@ function Flashcard({ tab }) {
               <img
                 src={lighticon}
                 alt=""
-                onClick={nextSlideButton}
+                onClick={showToastMessage}
                 className="lightimg"
               />
+              <ToastContainer />
               <img
                 src={soundicon}
                 alt=""
-                onClick={nextSlideButton}
+                onClick={showSoundToastMessage}
                 className="soundimg"
               />
             </div>

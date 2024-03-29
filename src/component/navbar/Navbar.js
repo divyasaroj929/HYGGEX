@@ -11,7 +11,7 @@ const Navbar = () => {
   const navData = [
     {
       name: "Home",
-      path: "/",
+      path: "/HYGGEX",
     },
     {
       name: "Flashcard",

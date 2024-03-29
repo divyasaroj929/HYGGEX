@@ -12,7 +12,8 @@ const Home = () => {
       <div className="home-container ">
         <Navbar />
         <BreadCrumbs breadcrumbs={breadcrumbs} />
-        <Flashcard tab={tab} />
+        {/* <Flashcard tab={tab} /> */}
+        {tab && <Flashcard tab={tab} />}
         <PublisedNavbar />
         <FAQ />
       </div>

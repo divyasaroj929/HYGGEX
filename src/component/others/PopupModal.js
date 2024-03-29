@@ -16,7 +16,8 @@ const PopupModal = ({ closeForm }) => {
         </div>
         <div className="modal-body-message">
           <div className="modal-body-message">
-            Could you explain the steps for setting up a login interface here?
+            login page
+            {/* Could you explain the steps for setting up a login interface here? */}
             {/* outside or press escape key in order to close the dialog */}
           </div>
         </div>

@@ -3,8 +3,6 @@ import FAQLibary from "../others/FAQLibary";
 import { faqdata } from "../../data";
 import "./faq.css";
 function FAQ() {
-  const [data, setData] = useState();
-
   return (
     <>
       <h1 className="faq-h1">FAQ</h1>
