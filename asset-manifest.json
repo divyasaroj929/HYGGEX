@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/HYGGEX/static/css/main.41eec743.css",
+    "main.css": "/HYGGEX/static/css/main.bd73f947.css",
     "main.js": "/HYGGEX/static/js/main.da3ff31d.js",
     "static/media/midlogoicon.svg": "/HYGGEX/static/media/midlogoicon.ffc156f23e40a457c33956b3a243cb8e.svg",
     "static/media/logo.svg": "/HYGGEX/static/media/logo.2eff76fc138ed6788df73f5f8324df8d.svg",
@@ -15,11 +15,11 @@
     "static/media/soundicon.svg": "/HYGGEX/static/media/soundicon.097ddfcdfe860d9a6861e315c05977e4.svg",
     "static/media/bigscreenicon.svg": "/HYGGEX/static/media/bigscreenicon.0ded6bc68550098a07cd526f2ef70f63.svg",
     "static/media/breadcrumbarrowicon.svg": "/HYGGEX/static/media/breadcrumbarrowicon.bf5a74d87e0bc38576b24cf8f6435181.svg",
-    "main.41eec743.css.map": "/HYGGEX/static/css/main.41eec743.css.map",
+    "main.bd73f947.css.map": "/HYGGEX/static/css/main.bd73f947.css.map",
     "main.da3ff31d.js.map": "/HYGGEX/static/js/main.da3ff31d.js.map"
   },
   "entrypoints": [
-    "static/css/main.41eec743.css",
+    "static/css/main.bd73f947.css",
     "static/js/main.da3ff31d.js"
   ]
 }
