@@ -2,21 +2,24 @@
   width: 34.01px;
   height: 34.01px;
   position: absolute;
-  top: 34.01px;
+  top: 40.01px;
   left: 34.01px;
   padding: 2.83px 7.08px 2.83px 7.08px;
   gap: 0px;
-  opacity: 0px;
+  /* opacity: 0px; */
+  cursor: pointer;
 }
 .soundimg {
   width: 34.01px;
   height: 34.01px;
   position: absolute;
-  top: 34.01px;
-  left: 643.99px;
+  top: 40.01px;
+  right: 43.01px;
+  /* left: 643.99px; */
   padding: 4.58px 4.25px 4.58px 4.25px;
   gap: 0px;
-  opacity: 0px;
+  /* opacity: 0px; */
+  cursor: pointer;
 }
 .faq-h1 {
   width: 97px;
@@ -69,7 +72,6 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 30px;
   position: absolute;
   top: 328px;
   left: 400px;
@@ -80,16 +82,13 @@
   padding: 0px;
   margin: 0;
 }
-/* .join-tab-arrowbutton {
+.join-tab-arrowbutton {
   width: 712px;
   height: 485.19px;
-  position: absolute;
-  top: 389px;
-  left: 344px;
   gap: 32px;
   opacity: 0px;
 }
- */
+
 .tab-title {
   background-color: #fff;
   display: inline-block;
@@ -172,6 +171,9 @@
   flex-direction: column;
   padding-top: 40px;
 }
+.pointer {
+  cursor: pointer;
+}
 
 .arrow-silde {
   width: 612px;
@@ -190,10 +192,12 @@
 .img-size {
   height: 50px;
   width: 50px;
+  cursor: pointer;
 }
 .img-size-before {
   height: 20px;
   width: 20px;
+  cursor: pointer;
 }
 
 .left-arrow,
