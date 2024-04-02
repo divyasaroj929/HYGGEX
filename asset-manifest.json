@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/HYGGEX/static/css/main.3aa119f4.css",
-    "main.js": "/HYGGEX/static/js/main.f665a515.js",
+    "main.css": "/HYGGEX/static/css/main.41eec743.css",
+    "main.js": "/HYGGEX/static/js/main.da3ff31d.js",
     "static/media/midlogoicon.svg": "/HYGGEX/static/media/midlogoicon.ffc156f23e40a457c33956b3a243cb8e.svg",
     "static/media/logo.svg": "/HYGGEX/static/media/logo.2eff76fc138ed6788df73f5f8324df8d.svg",
     "static/media/addcardicon.svg": "/HYGGEX/static/media/addcardicon.e39a252a04afe94e34ce6b948c73250a.svg",
@@ -15,11 +15,11 @@
     "static/media/soundicon.svg": "/HYGGEX/static/media/soundicon.097ddfcdfe860d9a6861e315c05977e4.svg",
     "static/media/bigscreenicon.svg": "/HYGGEX/static/media/bigscreenicon.0ded6bc68550098a07cd526f2ef70f63.svg",
     "static/media/breadcrumbarrowicon.svg": "/HYGGEX/static/media/breadcrumbarrowicon.bf5a74d87e0bc38576b24cf8f6435181.svg",
-    "main.3aa119f4.css.map": "/HYGGEX/static/css/main.3aa119f4.css.map",
-    "main.f665a515.js.map": "/HYGGEX/static/js/main.f665a515.js.map"
+    "main.41eec743.css.map": "/HYGGEX/static/css/main.41eec743.css.map",
+    "main.da3ff31d.js.map": "/HYGGEX/static/js/main.da3ff31d.js.map"
   },
   "entrypoints": [
-    "static/css/main.3aa119f4.css",
-    "static/js/main.f665a515.js"
+    "static/css/main.41eec743.css",
+    "static/js/main.da3ff31d.js"
   ]
 }
